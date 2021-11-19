@@ -5,16 +5,21 @@ const output = document.querySelector(".output");
 
 const check = () => {
   const pass = input.value.split("");
-  if (pass.length < 10) {
-    input.style.backgroundColor = "red";
-    input.style.color = "white";
-    output.innerText = `Password in less than 10 characters 🙁,\nplease add ${
-      10 - pass.length
-    } more character`;
+  const ch = input.value;
+  if (ch !== "") {
+    if (pass.length < 10) {
+      input.style.backgroundColor = "red";
+      input.style.color = "white";
+      output.innerText = `Password in less than 10 characters 🙁,\nplease add ${
+        10 - pass.length
+      } more character`;
+    } else {
+      input.style.backgroundColor = "green";
+      input.style.color = "white";
+      output.innerText = "Good Password 🤩";
+    }
   } else {
-    input.style.backgroundColor = "green";
-    input.style.color = "white";
-    output.innerText = "Good Password 🤩";
+    output.innerText = "Enter some input! 😒";
   }
 };
 
