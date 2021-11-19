@@ -8,7 +8,7 @@ const check = () => {
   if (pass.length < 10) {
     input.style.backgroundColor = "red";
     input.style.color = "white";
-    output.innerText = `Password in less than 10 characters, please add ${
+    output.innerText = `Password in less than 10 characters 🙁,\nplease add ${
       10 - pass.length
     } more character`;
   } else {
